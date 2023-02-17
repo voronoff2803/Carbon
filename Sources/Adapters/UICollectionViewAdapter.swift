@@ -173,6 +173,10 @@ extension UICollectionViewAdapter: UICollectionViewDataSource {
 }
 
 extension UICollectionViewAdapter: UICollectionViewDelegate {
+    open func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // for override
+    }
+    
     /// Callback the selected event of cell to the `didSelect` closure.
     open func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let didSelect = didSelect else { return }
