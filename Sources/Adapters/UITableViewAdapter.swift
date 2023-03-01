@@ -133,6 +133,11 @@ extension UITableViewAdapter: UITableViewDataSource {
 
 extension UITableViewAdapter: UITableViewDelegate {
     /// Resister and dequeue the header in specified section.
+    open func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // for override
+    }
+    
+    
     open func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let node = headerNode(in: section) else { return nil }
 
